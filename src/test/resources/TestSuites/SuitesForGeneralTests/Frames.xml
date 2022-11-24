@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Frames" verbose="1" >
+    <test name="GeneralSeleniumFunctionalityTests.DragAndDrop" >
+        <parameter name="browser" value="Test"/>
+        <parameter name="pageURL" value="https://jqueryui.com/droppable/"/>
+        <classes>
+            <class name="GeneralSeleniumFunctionalityTests.DragAndDrop">
+                <methods>
+                    <include name="dragAndDrop"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+</suite>

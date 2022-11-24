@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="BrokenLinksTest" verbose="1" >
+    <test name="BrokenLinkTest" >
+        <parameter name="browser" value="Edge"/>
+        <parameter name="pageURL" value="https://rahulshettyacademy.com/AutomationPractice/"/>
+        <classes>
+            <class name="GeneralSeleniumFunctionalityTests.BrokenLinks">
+                <methods>
+                    <include name="brokenLink"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

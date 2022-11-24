@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="GeneralSeleniumFunctionalityTests.CheckboxTest" verbose="1" >
+    <test name="CheckBox" >
+        <parameter name="browser" value="Firefox"/>
+        <parameter name="pageURL" value="https://rahulshettyacademy.com/dropdownsPractise/"/>
+        <classes>
+            <class name="GeneralSeleniumFunctionalityTests.CheckboxTest">
+                <methods>
+                    <include name="checkboxTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+</suite>

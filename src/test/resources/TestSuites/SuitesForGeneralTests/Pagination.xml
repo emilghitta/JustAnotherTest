@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="PaginationTests" verbose="1" >
+    <test name="PaginationTest" >
+        <parameter name="browser" value="Edge"/>
+        <parameter name="pageURL" value="https://rahulshettyacademy.com/seleniumPractise/#/offers"/>
+        <classes>
+            <class name="GeneralSeleniumFunctionalityTests.Pagination">
+                <methods>
+                    <include name="paginationTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+</suite>

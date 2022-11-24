@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="TableSortTest" verbose="1" >
+    <test name="TableSort" >
+        <parameter name="browser" value="Edge"/>
+        <parameter name="pageURL" value="https://rahulshettyacademy.com/seleniumPractise/#/offers"/>
+        <classes>
+            <class name="GeneralSeleniumFunctionalityTests.TableSorting">
+                <methods>
+                    <include name="tableSort"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+</suite>

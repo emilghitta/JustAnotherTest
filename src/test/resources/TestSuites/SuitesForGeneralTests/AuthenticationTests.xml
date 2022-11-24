@@ -1,0 +1,72 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="GeneralSeleniumFunctionalityTests.AuthenticationTests" verbose="1" >
+
+    <test name="Valid Authentication Test" >
+        <parameter name="browser" value="chrome"/>
+        <parameter name="authenticationPageURL" value="https://the-internet.herokuapp.com/login"/>
+        <parameter name="username" value="tomsmith"/>
+        <parameter name="password" value="SuperSecretPassword!"/>
+        <parameter name="loggedInPageURL" value="https://the-internet.herokuapp.com/secure"/>
+        <parameter name="expectedLoginMessage" value="You logged into a secure area!"/>
+        <parameter name="pageTitle" value="The Internet"/>
+        <parameter name="expectedSecurePageContent" value="Welcome to the Secure Area. When you are done click logout below."/>
+        <classes>
+            <class name="GeneralSeleniumFunctionalityTests.AuthenticationTests">
+                <methods>
+                    <include name="successfullLogin"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Valid Logout Test" >
+        <parameter name="browser" value="chrome"/>
+        <parameter name="authenticationPageURL" value="https://the-internet.herokuapp.com/login"/>
+        <parameter name="username" value="tomsmith"/>
+        <parameter name="password" value="SuperSecretPassword!"/>
+        <parameter name="loggedInPageURL" value="https://the-internet.herokuapp.com/secure"/>
+        <parameter name="expectedLoggedOutMessage" value="You logged out of the secure area!"/>
+        <classes>
+            <class name="GeneralSeleniumFunctionalityTests.AuthenticationTests">
+                <methods>
+                    <include name="successfullLogoutTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+
+    <test name="Invalid Username Test" >
+        <parameter name="browser" value="firefox"/>
+        <parameter name="authenticationPageURL" value="https://the-internet.herokuapp.com/login"/>
+        <parameter name="username" value="tolly"/>
+        <parameter name="password" value="SuperSecretPassword!"/>
+        <parameter name="expectedErrorMessage" value="Your username is invalid!"/>
+        <classes>
+            <class name="GeneralSeleniumFunctionalityTests.AuthenticationTests">
+                    <methods>
+                        <include name="invalidLoginTest"/>
+                    </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Invalid Password Test">
+        <parameter name="browser" value="edge"/>
+        <parameter name="authenticationPageURL" value="https://the-internet.herokuapp.com/login"/>
+        <parameter name="username" value="tomsmith"/>
+        <parameter name="password" value="Destruction of the massess"/>
+        <parameter name="expectedErrorMessage" value="Your password is invalid!"/>
+        <classes>
+            <class name="GeneralSeleniumFunctionalityTests.AuthenticationTests">
+                <methods>
+                    <include name="invalidLoginTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+</suite>

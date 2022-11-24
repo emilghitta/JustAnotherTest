@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="GeneralSeleniumFunctionalityTests.JavaAlerts" verbose="1" >
+    <test name="JavaAlerrtsTest" >
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="pageURL" value="https://rahulshettyacademy.com/AutomationPractice/"/>
+        <parameter name="inputName" value="Emil"/>
+        <parameter name="expectedAlertMessage" value="Hello Emil, share this practice page and share your knowledge"/>
+        <parameter name="confirmAlertMessage" value="Hello Emil, Are you sure you want to confirm?"/>
+        <classes>
+            <class name="GeneralSeleniumFunctionalityTests.JavaAlerts">
+                <methods>
+                    <include name="simpleAlert"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+</suite>

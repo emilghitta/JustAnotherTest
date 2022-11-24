@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="InvalidSSLTest" verbose="1" >
+    <test name="InvalidSSLTest" >
+        <parameter name="browser" value="Edge"/>
+        <parameter name="pageURL" value="https://expired.badssl.com/"/>
+        <classes>
+            <class name="GeneralSeleniumFunctionalityTests.BadSSL">
+                <methods>
+                    <include name="badSSL"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="SessionCookieDeletion" >
+        <parameter name="browser" value="Edge"/>
+        <parameter name="pageURL" value="https://the-internet.herokuapp.com/login"/>
+        <parameter name="username" value="tomsmith"/>
+        <parameter name="password" value="SuperSecretPassword!"/>
+        <classes>
+            <class name="GeneralSeleniumFunctionalityTests.BadSSL">
+                <methods>
+                    <include name="sessionCookieDeletion"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

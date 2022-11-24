@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="AutoSugestiveDropdown" verbose="1" >
+    <test name="AutoSugestive" >
+        <parameter name="browser" value="Firefox"/>
+        <parameter name="pageURL" value="https://rahulshettyacademy.com/dropdownsPractise/"/>
+        <parameter name="searchString" value="ro"/>
+        <parameter name="desiredSearchString" value="Romania"/>
+        <classes>
+            <class name="GeneralSeleniumFunctionalityTests.AutoSuggestDropdown">
+                <methods>
+                    <include name="autoSuggestDropdown"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+</suite>

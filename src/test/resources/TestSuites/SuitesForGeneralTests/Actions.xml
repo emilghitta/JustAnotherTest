@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="ActionsTest" verbose="1" >
+    <test name="GeneralSeleniumFunctionalityTests.Actions" >
+        <parameter name="browser" value="javaTraining"/>
+        <parameter name="pageURL" value="http://the-internet.herokuapp.com/hovers"/>
+        <parameter name="windowPageURL" value="https://rahulshettyacademy.com/loginpagePractise/"/>
+        <classes>
+            <class name="GeneralSeleniumFunctionalityTests.Actions">
+                <methods>
+                    <include name="hoverTest"/>
+                    <include name="windowTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+</suite>

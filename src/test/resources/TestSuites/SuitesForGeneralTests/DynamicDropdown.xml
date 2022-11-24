@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="DynamicDropdownTest" verbose="1" >
+    <test name="GeneralSeleniumFunctionalityTests.DynamicDropdown" >
+        <parameter name="browser" value="Firefox"/>
+        <parameter name="pageURL" value="https://rahulshettyacademy.com/dropdownsPractise/"/>
+        <parameter name="defaultFromValue" value="Departure City"/>
+        <parameter name="defaultToValue" value="Arrival City"/>
+        <parameter name="expectedNewFromValue" value="Chennai (MAA)"/>
+        <parameter name="expectedNewToValue" value="Adampur (AIP)"/>
+        <classes>
+            <class name="GeneralSeleniumFunctionalityTests.DynamicDropdown">
+                <methods>
+                    <include name="dynamicDropdownTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+</suite>

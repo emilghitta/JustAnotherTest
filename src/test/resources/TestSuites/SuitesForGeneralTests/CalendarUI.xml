@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="GeneralSeleniumFunctionalityTests.CalendarTest" verbose="1" >
+    <test name="Calendar" >
+        <parameter name="browser" value="javaTraining"/>
+        <parameter name="pageURL" value="https://rahulshettyacademy.com/dropdownsPractise/"/>
+        <parameter name="expectedDepartureDate" value="Sat, Feb 04 2023"/>
+        <classes>
+            <class name="GeneralSeleniumFunctionalityTests.CalendarTest">
+                <methods>
+                    <include name="calendarTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+</suite>

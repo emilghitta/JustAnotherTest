@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Selenium4Tests" verbose="1">
+    <listeners>
+        <listener class-name="core.Listeners"/>
+    </listeners>
+    <parameter name="pageURL" value="https://rahulshettyacademy.com/client"/>
+    <parameter name="dashboardURL" value="https://rahulshettyacademy.com/client/dashboard/dash"/>
+    <parameter name="username" value="emilghitta@gmail.com"/>
+    <parameter name="password" value="!Testmozilla1"/>
+    
+    <test name="SuccessfullLoginTest" >
+        <classes>
+            <class name="TestsForFramework.LoginTests">
+                <methods>
+                    <include name="successfullyLoginTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

@@ -1,0 +1,33 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="GeneralSeleniumFunctionalityTests.DynamicControlsTest" verbose="1" >
+    <test name="DynamicControlCheckbox" >
+        <parameter name="browser" value="Edge"/>
+        <parameter name="pageURL" value="http://the-internet.herokuapp.com/dynamic_controls"/>
+        <parameter name="goneMessage" value="It's gone!"/>
+        <parameter name="backMessage" value="It's back!"/>
+        <classes>
+            <class name="GeneralSeleniumFunctionalityTests.DynamicControlsTest">
+                <methods>
+                    <include name="addAndRemoveTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="DynamicControlTextBox" >
+        <parameter name="browser" value="Edge"/>
+        <parameter name="pageURL" value="http://the-internet.herokuapp.com/dynamic_controls"/>
+        <parameter name="textInput" value="We can type here"/>
+        <parameter name="enabledMessage" value="It's enabled!"/>
+        <parameter name="disabledMessage" value="It's disabled!"/>
+        <classes>
+            <class name="GeneralSeleniumFunctionalityTests.DynamicControlsTest">
+                <methods>
+                    <include name="enableAndDisableInputField"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

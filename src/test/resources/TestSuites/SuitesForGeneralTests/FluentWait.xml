@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="GeneralSeleniumFunctionalityTests.FluentWait" verbose="1" >
+    <test name="FluentWaitTest" >
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="pageURL" value="http://the-internet.herokuapp.com/dynamic_loading/1"/>
+        <classes>
+            <class name="GeneralSeleniumFunctionalityTests.FluentWait">
+                <methods>
+                    <include name="fluentWaitTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+</suite>

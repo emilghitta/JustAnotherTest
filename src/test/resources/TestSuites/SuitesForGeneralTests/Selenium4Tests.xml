@@ -1,0 +1,57 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Selenium4Tests" verbose="1" parallel="tests" thread-count="2">
+    <listeners>
+        <listener class-name="core.Listeners"/>
+    </listeners>
+    <test name="RelativeLocators" >
+        <parameter name="browser" value="Edge"/>
+        <parameter name="pageURL" value="https://rahulshettyacademy.com/angularpractice/"/>
+        <classes>
+            <class name="GeneralSeleniumFunctionalityTests.Selenium4">
+                <methods>
+                    <include name="relativeLocators"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="OpenWindowsTest" >
+        <parameter name="browser" value="Edge"/>
+        <parameter name="pageURL" value="https://rahulshettyacademy.com/angularpractice/"/>
+        <parameter name="secondPageURL" value="https://rahulshettyacademy.com/"/>
+        <classes>
+            <class name="GeneralSeleniumFunctionalityTests.Selenium4">
+                <methods>
+                    <include name="switchWindow"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="PartialScreenshotTest" >
+        <parameter name="browser" value="Edge"/>
+        <parameter name="pageURL" value="https://rahulshettyacademy.com/angularpractice/"/>
+        <classes>
+            <class name="GeneralSeleniumFunctionalityTests.Selenium4">
+                <methods>
+                    <include name="partialScreenshot"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="GetHeightAndWidth" >
+        <parameter name="browser" value="Edge"/>
+        <parameter name="pageURL" value="https://rahulshettyacademy.com/angularpractice/"/>
+        <classes>
+            <class name="GeneralSeleniumFunctionalityTests.Selenium4">
+                <methods>
+                    <include name="getHeightAndWidth"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+</suite>

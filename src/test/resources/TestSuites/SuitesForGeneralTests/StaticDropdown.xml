@@ -1,0 +1,36 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="StaticDropdownTest" verbose="1" >
+    <test name="staticSelect" >
+        <parameter name="browser" value="Edge"/>
+        <parameter name="pageURL" value="https://rahulshettyacademy.com/dropdownsPractise/"/>
+        <parameter name="selectedOption1" value="INR"/>
+        <parameter name="selectedOption2" value="AED"/>
+        <parameter name="selectedOption3" value="USD"/>
+        <classes>
+            <class name="GeneralSeleniumFunctionalityTests.StaticDropdowns">
+                <methods>
+                    <include name="staticSelect"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="dropdownWithValue" >
+        <parameter name="browser" value="Edge"/>
+        <parameter name="pageURL" value="https://rahulshettyacademy.com/dropdownsPractise/"/>
+        <parameter name="defaultValue" value="1 Adult"/>
+        <parameter name="valueWithAdultIncrement" value="2 Adult"/>
+        <parameter name="valueWithChildIncrement" value="2 Adult, 1 Child"/>
+        <parameter name="valueWithInfantIncrement" value="2 Adult, 1 Child, 1 Infant"/>
+        <classes>
+            <class name="GeneralSeleniumFunctionalityTests.StaticDropdowns">
+                <methods>
+                    <include name="dropdownWithButtons"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+</suite>

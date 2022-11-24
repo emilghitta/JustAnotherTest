@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="MiscTests" verbose="1" >
+    <test name="getLinks" >
+        <parameter name="browser" value="Edge"/>
+        <parameter name="pageURL" value="https://www.rahulshettyacademy.com/AutomationPractice/"/>
+        <classes>
+            <class name="GeneralSeleniumFunctionalityTests.PageScrolling">
+                <methods>
+                    <include name="pageScroll"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="AllTests" verbose="1" >
+    <test name="GeneralSeleniumFunctionalityTests.AuthenticationTests" >
+        <classes>
+            <class name="GeneralSeleniumFunctionalityTests.AuthenticationTests" />
+        </classes>
+    </test>
+
+    <test name="BrowserNavigationTests">
+        <classes>
+            <class name="GeneralSeleniumFunctionalityTests.BrowserNavigation"/>
+        </classes>
+    </test>
+</suite>
