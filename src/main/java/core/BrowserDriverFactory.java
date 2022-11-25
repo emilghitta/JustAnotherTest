@@ -34,6 +34,7 @@ public class BrowserDriverFactory {
                 WebDriverManager.firefoxdriver().setup();
                 if(executionMode.equals("headless")){
                     firefoxOptions.addArguments(executionMode);
+                    System.out.println("Starting in headless mode");
                 }
 
                 driver = new FirefoxDriver(firefoxOptions);
@@ -46,6 +47,7 @@ public class BrowserDriverFactory {
                 WebDriverManager.chromedriver().setup();
                 if(executionMode.equals("headless")){
                     chromeOptions.addArguments(executionMode);
+                    System.out.println("Starting in headless mode");
                 }
                 driver = new ChromeDriver(chromeOptions);
                 driver.manage().window().setSize(new Dimension(screenWidth,screenHeight));
@@ -56,6 +58,7 @@ public class BrowserDriverFactory {
                 WebDriverManager.edgedriver().setup();
                 if (executionMode.equals("headless")) {
                     edgeOptions.addArguments(executionMode);
+                    System.out.println("Starting in headless mode");
                 }
                 driver = new EdgeDriver(edgeOptions);
                 driver.manage().window().setSize(new Dimension(screenWidth,screenHeight));
