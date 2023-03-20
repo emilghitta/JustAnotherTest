@@ -2,17 +2,21 @@ package core;
 
 import messages.DashboardPageMessages;
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
 
 public class BasePageObject {
     WebDriver driver;
+    Actions actions;
 
     public BasePageObject(WebDriver driver){
         this.driver = driver;
+        actions = new Actions(this.driver);
     }
 
 
@@ -20,6 +24,23 @@ public class BasePageObject {
     protected WebElement findElement(By locator){
         waitForVisibility(locator,Duration.ofSeconds(5));
         return driver.findElement(locator);
+    }
+
+    //Find and return a list of WebElements
+    protected List<WebElement> findElements(By locator){
+        waitForVisibility(locator,Duration.ofSeconds(5));
+        return driver.findElements(locator);
+    }
+
+    //Verify and return if a list contains the desired string
+    public boolean checkEntireListForItem(List<WebElement> list, String input){
+        boolean isPresent = false;
+        for (WebElement e: list) {
+            if(e.getText().contains(input)){
+                isPresent = true;
+            }
+        }
+        return isPresent;
     }
 
 
@@ -44,6 +65,10 @@ public class BasePageObject {
         findElement(locator).click();
     }
 
+    //Hit Enter
+    protected void hitEnterKey(){
+        actions.sendKeys(Keys.ENTER).build().perform();
+    }
 
     //Waits
     private void waitFor(ExpectedCondition<WebElement> condition, Duration time){

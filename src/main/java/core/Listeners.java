@@ -5,9 +5,14 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import lombok.SneakyThrows;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.logging.LogEntries;
+import org.openqa.selenium.logging.LogEntry;
+import org.openqa.selenium.logging.LogType;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+
+import java.util.List;
 
 
 public class Listeners extends TestUtilities implements ITestListener{
@@ -33,6 +38,12 @@ public class Listeners extends TestUtilities implements ITestListener{
         extentTest.get().fail(result.getThrowable());
         String filePath = getScreenshot(result.getMethod().getMethodName(),(WebDriver) result.getTestContext().getAttribute("WebDriver"));
         extentTest.get().addScreenCaptureFromPath(filePath,result.getMethod().getMethodName());
+
+        LogEntries entry = driver.manage().logs().get(LogType.BROWSER);
+        List<LogEntry> logs = entry.getAll();
+        for (LogEntry e: logs) {
+            System.out.println(e.getMessage());
+        }
     }
 
     @Override

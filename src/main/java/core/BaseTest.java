@@ -21,7 +21,7 @@ public class BaseTest {
 
         driver = browserDriverFactory.createDriver();
         context.setAttribute("WebDriver",driver);
-        pages = new Pages(driver);
+        pages = new Pages(this.driver);
 
         driver.get(pageURL);
         driver.manage().window().maximize();

@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Selenium4Tests" verbose="1">
+    <listeners>
+        <listener class-name="core.Listeners"/>
+    </listeners>
+    <parameter name="pageURL" value="https://rahulshettyacademy.com/angularAppdemo/"/>
+
+    <test name="JSFailureTest" >
+        <classes>
+            <class name="GeneralSeleniumFunctionalityTests.BrowserLogFailures">
+                <methods>
+                    <include name="logJSFailures"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

@@ -11,7 +11,7 @@
     
     <test name="SuccessfullLoginTest" >
         <classes>
-            <class name="TestsForFramework.LoginTests">
+            <class name="TestsForFramework.AuthenticationTests.LoginTests">
                 <methods>
                     <include name="successfullyLoginTest"/>
                 </methods>

@@ -1,4 +1,4 @@
-package TestsForFramework;
+package TestsForFramework.AuthenticationTests;
 
 import core.Retry;
 import core.TestUtilities;
